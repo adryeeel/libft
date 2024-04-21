@@ -15,7 +15,7 @@ The libft library is a collection of custom implementations of standard function
 
 ## Usage
 
-- Clone the repository: `git clone https://github.com/your-username/libft.git`
+- Clone the repository: `git clone https://github.com/adryeeel/libft.git`
 
 - Enter the directory: `cd libft`
 
