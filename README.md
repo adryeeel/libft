@@ -1,7 +1,7 @@
 # Libft
 
 ![C Language](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C Language](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Ubuntu OS](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 The libft library is a collection of custom implementations of standard functions from the C Standard Library, along with additional utility functions to simplify common tasks in C programming.
 
