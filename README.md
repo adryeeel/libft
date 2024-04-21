@@ -27,7 +27,7 @@ The libft library is a collection of custom implementations of standard function
 
 ## Evaluation
 
-This project was assigned as a outstanding project by three 42 school peers and has received the maximum evaluation score &ndash; **125%**, including a bonus of 25 points.
+This project was assigned as a ⭐ outstanding project by three 42 school peers and has received the maximum evaluation score &ndash; **125%**, including a bonus of 25 points.
 
 ## Contributing
 
