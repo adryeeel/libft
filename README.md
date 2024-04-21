@@ -35,4 +35,4 @@ Contributions and feedback are welcome! If you find bugs or have suggestions for
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
