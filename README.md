@@ -29,6 +29,8 @@ The `libft` library is a collection of custom implementations of standard functi
 
 This project was assigned as a ⭐ outstanding project by three 42 school peers and has received the maximum evaluation score &ndash; **125%**, including a bonus of 25 points.
 
+![Score 125%](README/evaluation-score.png)
+
 ## Contributing
 
 Contributions and feedback are welcome! If you find bugs or have suggestions for improvements, please open an issue or submit a pull request.
