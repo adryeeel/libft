@@ -7,7 +7,7 @@ The libft library is a collection of custom implementations of standard function
 
 ## Key Features
 
-- Standard Functions: Re-implementations of fundamental functions such as `printf`, `strlen`, `strcpy`, `strcat`, `atoi`, and more.
+- Standard Functions: Re-implementations of fundamental functions such as `printf`, `strlen`, `strlcpy`, `strlcat`, `atoi`, and more.
 
 - Additional Utilities: A variety of utility functions designed to simplify common tasks in C programming, including linked list management, memory allocation, string manipulation, and more.
 
