@@ -94,6 +94,7 @@ LIBQUEUE_OBJ = $(addprefix $(LIBQUEUE_DIR)/$(BUILD_DIR)/, $(LIBQUEUE_SRCS:.c=.o)
 # Conversion functions
 
 LIBCONVERT_SRCS =	ft_atoi.c 	\
+									ft_atol.c		\
 									ft_itoa.c		\
 									ft_xtoa.c		\
 									ft_ctob.c 	\

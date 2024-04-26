@@ -19,6 +19,7 @@
 int		*ft_ctob(char c);
 char	*ft_itoa(long n);
 int		ft_atoi(const char *nptr);
+long	ft_atol(const char *nptr);
 char	*ft_xtoa(unsigned long num);
 size_t	ft_nbrlen(long nbr, int base);
 
