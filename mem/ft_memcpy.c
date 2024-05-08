@@ -6,13 +6,13 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:41:05 by arocha-b          #+#    #+#             */
-/*   Updated: 2023/10/10 14:51:12 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:27:30 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const char *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*o_dest;
 	const unsigned char	*o_src;
