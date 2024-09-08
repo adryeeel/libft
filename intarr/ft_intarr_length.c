@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 18:38:16 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/08 20:39:56 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/08 23:17:50 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 size_t ft_intarr_length(int *intarr)
 {
 	(void)intarr;
+	return (0);
 }
