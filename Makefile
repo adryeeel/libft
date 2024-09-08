@@ -190,6 +190,7 @@ clean:
 	rm -rf $(LIBQUEUE_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBSTRING_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBCONVERT_DIR)/$(BUILD_DIR)
+	rm -rf $(LIBINTARR_DIR)/$(BUILD_DIR)
 	make $@ -C $(LIBPRINTF_DIR)
 
 fclean: clean
