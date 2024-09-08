@@ -103,12 +103,30 @@ LIBCONVERT_SRCS =	ft_atoi.c 	\
 LIBCONVERT_DIR = convert
 LIBCONVERT_OBJ = $(addprefix $(LIBCONVERT_DIR)/$(BUILD_DIR)/, $(LIBCONVERT_SRCS:.c=.o))
 
+# Integer array functions
+
+LIBINTARR_SRCS =	ft_intarr_pop.c				\
+									ft_intarr_map.c				\
+									ft_intarr_copy.c			\
+									ft_intarr_free.c			\
+									ft_intarr_join.c			\
+									ft_intarr_push.c			\
+									ft_intarr_sort.c			\
+									ft_intarr_swap.c			\
+									ft_intarr_shift.c			\
+									ft_intarr_length.c		\
+									ft_intarr_unshift.c		\
+									ft_intarr_insertat.c	\
+
+LIBINTARR_DIR = intarr
+LIBINTARR_OBJ = $(addprefix $(LIBINTARR_DIR)/$(BUILD_DIR)/, $(LIBINTARR_SRCS:.c=.o))
+
 LIBPRINTF_DIR = printf
 LIBPRINTF = libprintf.a
 
 all: $(NAME)
 
-$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) | $(LIBPRINTF)
+$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) $(LIBINTARR_OBJ) | $(LIBPRINTF)
 	cp $(LIBPRINTF_DIR)/$(LIBPRINTF) $(NAME)
 	@ar rcs $@ $^
 	@printf "✅ \033[0;32m$@ was created successfully!\033[0m\n"
@@ -134,6 +152,9 @@ $(LIBQUEUE_DIR)/$(BUILD_DIR)/%.o: $(LIBQUEUE_DIR)/%.c | $(LIBQUEUE_DIR)/$(BUILD_
 $(LIBCONVERT_DIR)/$(BUILD_DIR)/%.o: $(LIBCONVERT_DIR)/%.c | $(LIBCONVERT_DIR)/$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(LIBINTARR_DIR)/$(BUILD_DIR)/%.o: $(LIBINTARR_DIR)/%.c | $(LIBINTARR_DIR)/$(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(LIBMEM_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
@@ -153,6 +174,9 @@ $(LIBQUEUE_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
 $(LIBCONVERT_DIR)/$(BUILD_DIR):
+	mkdir -p $@
+
+$(LIBINTARR_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
 $(LIBPRINTF):
