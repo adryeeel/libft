@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarr_join.c                                   :+:      :+:    :+:   */
+/*   ft_strarr_merge.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/08 19:13:46 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/09 12:31:09 by arocha-b         ###   ########.fr       */
+/*   Created: 2024/09/09 12:47:32 by arocha-b          #+#    #+#             */
+/*   Updated: 2024/09/09 12:48:27 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void ft_copy(char *dst[], char *src[], size_t len)
 	}
 }
 
-char **ft_strarr_join(char *strarr_a[], char *strarr_b[])
+char **ft_strarr_merge(char *strarr_a[], char *strarr_b[])
 {
 	size_t len_a;
 	size_t len_b;
@@ -44,4 +44,3 @@ char **ft_strarr_join(char *strarr_a[], char *strarr_b[])
 
 	return (new);
 }
-
