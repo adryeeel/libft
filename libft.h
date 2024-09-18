@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 09:56:04 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/14 00:18:53 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/19 00:38:11 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "convert/ft_convert.h"
 # include "ctype/ft_ctype.h"
+# include "files/ft_files.h"
 # include "mem/ft_mem.h"
 # include "print/ft_print.h"
 # include "printf/ft_printf.h"
