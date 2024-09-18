@@ -133,6 +133,7 @@ LIBSTRARR_SRCS =	ft_strarr_pop.c				\
 									ft_strarr_swap.c			\
 									ft_strarr_shift.c			\
 									ft_strarr_merge.c			\
+									ft_strarr_create.c		\
 									ft_strarr_length.c		\
 									ft_strarr_unshift.c		\
 									ft_strarr_insertat.c	\
