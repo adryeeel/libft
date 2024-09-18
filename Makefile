@@ -121,12 +121,31 @@ LIBINTARR_SRCS =	ft_intarr_pop.c				\
 LIBINTARR_DIR = intarr
 LIBINTARR_OBJ = $(addprefix $(LIBINTARR_DIR)/$(BUILD_DIR)/, $(LIBINTARR_SRCS:.c=.o))
 
+# Strings array functions
+
+LIBSTRARR_SRCS =	ft_strarr_pop.c				\
+									ft_strarr_map.c				\
+									ft_strarr_copy.c			\
+									ft_strarr_free.c			\
+									ft_strarr_join.c			\
+									ft_strarr_push.c			\
+									ft_strarr_sort.c			\
+									ft_strarr_swap.c			\
+									ft_strarr_shift.c			\
+									ft_strarr_merge.c			\
+									ft_strarr_length.c		\
+									ft_strarr_unshift.c		\
+									ft_strarr_insertat.c	\
+
+LIBSTRARR_DIR = strarr
+LIBSTRARR_OBJ = $(addprefix $(LIBSTRARR_DIR)/$(BUILD_DIR)/, $(LIBSTRARR_SRCS:.c=.o))
+
 LIBPRINTF_DIR = printf
 LIBPRINTF = libprintf.a
 
 all: $(NAME)
 
-$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) $(LIBINTARR_OBJ) | $(LIBPRINTF)
+$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) $(LIBINTARR_OBJ) $(LIBSTRARR_OBJ) | $(LIBPRINTF)
 	cp $(LIBPRINTF_DIR)/$(LIBPRINTF) $(NAME)
 	@ar rcs $@ $^
 	@printf "✅ \033[0;32m$@ was created successfully!\033[0m\n"
@@ -155,6 +174,9 @@ $(LIBCONVERT_DIR)/$(BUILD_DIR)/%.o: $(LIBCONVERT_DIR)/%.c | $(LIBCONVERT_DIR)/$(
 $(LIBINTARR_DIR)/$(BUILD_DIR)/%.o: $(LIBINTARR_DIR)/%.c | $(LIBINTARR_DIR)/$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(LIBSTRARR_DIR)/$(BUILD_DIR)/%.o: $(LIBSTRARR_DIR)/%.c | $(LIBSTRARR_DIR)/$(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(LIBMEM_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
@@ -179,6 +201,9 @@ $(LIBCONVERT_DIR)/$(BUILD_DIR):
 $(LIBINTARR_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
+$(LIBSTRARR_DIR)/$(BUILD_DIR):
+	mkdir -p $@
+
 $(LIBPRINTF):
 	@make -C $(LIBPRINTF_DIR)
 
@@ -191,6 +216,7 @@ clean:
 	rm -rf $(LIBSTRING_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBCONVERT_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBINTARR_DIR)/$(BUILD_DIR)
+	rm -rf $(LIBSTRARR_DIR)/$(BUILD_DIR)
 	make $@ -C $(LIBPRINTF_DIR)
 
 fclean: clean
