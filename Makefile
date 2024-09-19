@@ -51,6 +51,13 @@ LIBCTYPE_SRCS =	ft_isalnum.c	\
 LIBCTYPE_DIR = ctype
 LIBCTYPE_OBJ = $(addprefix $(LIBCTYPE_DIR)/$(BUILD_DIR)/, $(LIBCTYPE_SRCS:.c=.o))
 
+# File handling functions
+
+LIBFILES_SRCS =	ft_readl.c	\
+
+LIBFILES_DIR = files
+LIBFILES_OBJ = $(addprefix $(LIBFILES_DIR)/$(BUILD_DIR)/, $(LIBFILES_SRCS:.c=.o))
+
 # String handling functions
 
 LIBSTRING_SRCS =	ft_split.c		\
@@ -146,7 +153,7 @@ LIBPRINTF = libprintf.a
 
 all: $(NAME)
 
-$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) $(LIBINTARR_OBJ) $(LIBSTRARR_OBJ) | $(LIBPRINTF)
+$(NAME): $(LIBCONVERT_OBJ) $(LIBQUEUE_OBJ) $(LIBPRINT_OBJ) $(LIBSTRING_OBJ) $(LIBCTYPE_OBJ)  $(LIBFILES_OBJ) $(LIBSLL_OBJ) $(LIBMEM_OBJ) $(LIBINTARR_OBJ) $(LIBSTRARR_OBJ) | $(LIBPRINTF)
 	cp $(LIBPRINTF_DIR)/$(LIBPRINTF) $(NAME)
 	@ar rcs $@ $^
 	@printf "✅ \033[0;32m$@ was created successfully!\033[0m\n"
@@ -158,6 +165,9 @@ $(LIBSLL_DIR)/$(BUILD_DIR)/%.o: $(LIBSLL_DIR)/%.c | $(LIBSLL_DIR)/$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBCTYPE_DIR)/$(BUILD_DIR)/%.o: $(LIBCTYPE_DIR)/%.c | $(LIBCTYPE_DIR)/$(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(LIBFILES_DIR)/$(BUILD_DIR)/%.o: $(LIBFILES_DIR)/%.c | $(LIBFILES_DIR)/$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBSTRING_DIR)/$(BUILD_DIR)/%.o: $(LIBSTRING_DIR)/%.c | $(LIBSTRING_DIR)/$(BUILD_DIR)
@@ -185,6 +195,9 @@ $(LIBSLL_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
 $(LIBCTYPE_DIR)/$(BUILD_DIR):
+	mkdir -p $@
+
+$(LIBFILES_DIR)/$(BUILD_DIR):
 	mkdir -p $@
 
 $(LIBSTRING_DIR)/$(BUILD_DIR):
