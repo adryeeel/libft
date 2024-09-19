@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 09:56:04 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 00:38:11 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/19 01:03:59 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include "printf/ft_printf.h"
 # include "queue/ft_queue.h"
 # include "sll/ft_sll.h"
+# include "strarr/ft_strarr.h"
 # include "string/ft_string.h"
 
 #endif
