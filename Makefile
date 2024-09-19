@@ -225,6 +225,7 @@ clean:
 	rm -rf $(LIBMEM_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBSLL_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBCTYPE_DIR)/$(BUILD_DIR)
+	rm -rf $(LIBFILES_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBPRINT_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBQUEUE_DIR)/$(BUILD_DIR)
 	rm -rf $(LIBSTRING_DIR)/$(BUILD_DIR)
