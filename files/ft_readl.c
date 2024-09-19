@@ -5,46 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/08 14:37:14 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 00:12:50 by arocha-b         ###   ########.fr       */
+/*   Created: 2024/09/19 12:36:24 by arocha-b          #+#    #+#             */
+/*   Updated: 2024/09/19 14:21:44 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_files.h"
+#include "ft_buffer.h"
 
-static void	ft_strmcat(char **dst, char *src)
+char *ft_readl(int fd)
 {
-	char	*tmp;
+	int read_bytes;
+	char *next_line;
+	static char *buffer;
 
-	tmp = ft_strjoin(*dst, src);
-	free(*dst);
-	*dst = tmp;
-}
-
-char	*ft_readl(int fd)
-{
-	char	*line;
-	char	*buffer;
-	int		bytes_read;
-
-	if (fd < 0)	
-		return (NULL);
-	buffer = ft_calloc(BUFFER_SIZE, sizeof(char));
-	line = ft_calloc(NULL_BYTE, sizeof(char));
-	if (!buffer || !line)
-		return (NULL);
-	while (!ft_strchr(buffer, '\n'))
+	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE - NULL_BYTE);
-		if (bytes_read <= 0)
-		{
-			free(line);
-			free(buffer);
-			return (NULL);
-		}
-		buffer[bytes_read] = '\0';
-		ft_strmcat(&line, buffer);
+		return (NULL);
 	}
-	free(buffer);
-	return (line);
+	if (!buffer)
+	{
+		buffer = ft_calloc(BUFFER_SIZE + NULL_CHAR, sizeof(char));
+		if (!buffer)
+			return (NULL);
+	}
+	read_bytes = ft_buffer_readl(fd, &buffer);
+	if ((read_bytes < 0) || (read_bytes == 0 && !*buffer))
+	{
+		free(buffer);
+		return (NULL);
+	}
+	next_line = ft_buffer_getl(buffer);
+	ft_buffer_cutl(&buffer);
+	return (next_line);
 }
