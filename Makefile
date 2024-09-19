@@ -1,7 +1,7 @@
 NAME = libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 BUILD_DIR = build
 
@@ -53,8 +53,13 @@ LIBCTYPE_OBJ = $(addprefix $(LIBCTYPE_DIR)/$(BUILD_DIR)/, $(LIBCTYPE_SRCS:.c=.o)
 
 # File handling functions
 
-LIBFILES_SRCS =	ft_readl.c	\
+LIBFILES_SRCS =	ft_readl.c				\
+								ft_buffer_getl.c	\
+								ft_buffer_cutl.c	\
+								ft_buffer_readl.c	\
 
+BUFFER_SIZE ?= 1
+BUFSIZ_ARG = -D BUFFER_SIZE=$(BUFFER_SIZE)
 LIBFILES_DIR = files
 LIBFILES_OBJ = $(addprefix $(LIBFILES_DIR)/$(BUILD_DIR)/, $(LIBFILES_SRCS:.c=.o))
 
@@ -168,7 +173,7 @@ $(LIBCTYPE_DIR)/$(BUILD_DIR)/%.o: $(LIBCTYPE_DIR)/%.c | $(LIBCTYPE_DIR)/$(BUILD_
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFILES_DIR)/$(BUILD_DIR)/%.o: $(LIBFILES_DIR)/%.c | $(LIBFILES_DIR)/$(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(BUFSIZ_ARG) -c $< -o $@
 
 $(LIBSTRING_DIR)/$(BUILD_DIR)/%.o: $(LIBSTRING_DIR)/%.c | $(LIBSTRING_DIR)/$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@

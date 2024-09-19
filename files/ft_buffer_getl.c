@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_readl.c                                         :+:      :+:    :+:   */
+/*   ft_buffer_getl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 12:36:24 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 14:21:44 by arocha-b         ###   ########.fr       */
+/*   Created: 2024/09/19 12:42:52 by arocha-b          #+#    #+#             */
+/*   Updated: 2024/09/19 13:17:23 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_buffer.h"
 
-char *ft_readl(int fd)
+char	*ft_buffer_getl(char *buffer)
 {
-	int read_bytes;
-	char *next_line;
-	static char *buffer;
+	char	*line_pos;
+	char	*next_line;
+	size_t	next_line_len;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
-	{
-		return (NULL);
-	}
 	if (!buffer)
-	{
-		buffer = ft_calloc(BUFFER_SIZE + NULL_CHAR, sizeof(char));
-		if (!buffer)
-			return (NULL);
-	}
-	read_bytes = ft_buffer_readl(fd, &buffer);
-	if ((read_bytes < 0) || (read_bytes == 0 && !*buffer))
-	{
-		free(buffer);
 		return (NULL);
-	}
-	next_line = ft_buffer_getl(buffer);
-	ft_buffer_cutl(&buffer);
+	line_pos = ft_strchr(buffer, '\n');
+	if (!line_pos)
+		next_line_len = ft_strlen(buffer);
+	else
+		next_line_len = line_pos - buffer + 1;
+	next_line = ft_calloc(next_line_len + NULL_CHAR, sizeof(char));
+	ft_memcpy(next_line, buffer, next_line_len);
 	return (next_line);
 }
+
