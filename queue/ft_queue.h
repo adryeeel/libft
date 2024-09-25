@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:50:36 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/14 00:06:39 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 00:44:56 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,13 @@ typedef struct s_queue
 {
 	t_node			*head;
 	t_node			*tail;
+	size_t			length;
 
 }					t_queue;
 
 void				ft_dequeue(t_queue *q);
-void				ft_init_queue(t_queue *q);
+void				ft_queue_free(t_queue *q);
+void				ft_queue_init(t_queue *q);
 void				ft_enqueue(t_queue *q, void *data);
 
 #endif
