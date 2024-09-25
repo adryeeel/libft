@@ -98,7 +98,8 @@ LIBPRINT_OBJ = $(addprefix $(LIBPRINT_DIR)/$(BUILD_DIR)/, $(LIBPRINT_SRCS:.c=.o)
 
 LIBQUEUE_SRCS =	ft_dequeue.c		\
 								ft_enqueue.c		\
-								ft_init_queue.c	\
+								ft_queue_init.c	\
+								ft_queue_free.c	\
 
 LIBQUEUE_DIR = queue
 LIBQUEUE_OBJ = $(addprefix $(LIBQUEUE_DIR)/$(BUILD_DIR)/, $(LIBQUEUE_SRCS:.c=.o))
