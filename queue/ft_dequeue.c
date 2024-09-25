@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 21:00:35 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/13 21:17:48 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 00:47:33 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_dequeue(t_queue *q)
 	q->head = q->head->next;
 	if (!q->head)
 		q->tail = NULL;
+	q->length--;
 	free(node);
 }
