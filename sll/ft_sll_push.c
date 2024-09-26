@@ -6,29 +6,27 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 21:35:15 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/13 21:36:48 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:33:28 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_sll.h"
 
-static void	ft_sll_to_premier(t_sll *self, t_sll_node *new_node)
+void ft_sll_push(t_sll *self, void *data)
 {
-	new_node->next = NULL;
-	self->head = new_node;
-	self->tail = new_node;
-	self->size++;
-}
+	t_sll_node *new_node;
 
-void	ft_sll_push(t_sll *self, t_sll_node *new_node)
-{
-	if (self->size == 0)
-	{
-		ft_sll_to_premier(self, new_node);
-		return ;
-	}
+	new_node = (t_sll_node *)malloc(sizeof(t_sll_node));
+	if (!new_node)
+		return;
 	new_node->next = NULL;
-	self->size++;
+	new_node->data = data;
+	if (self->size++ == 0)
+	{
+		self->head = new_node;
+		self->tail = new_node;
+		return;
+	}
 	self->tail->next = new_node;
 	self->tail = new_node;
 }
