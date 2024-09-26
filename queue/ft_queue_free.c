@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 00:41:34 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/26 00:50:40 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 01:05:55 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void ft_queue_free(t_queue *q)
 {
-	while (q->length-- > 0)
+	while (q->length)
 		ft_dequeue(q);
 }
