@@ -25,10 +25,11 @@ LIBSLL_SRCS =	ft_sll_get.c			\
 							ft_sll_map.c			\
 							ft_sll_push.c			\
 							ft_sll_swap.c			\
+							ft_sll_init.c			\
 							ft_sll_shift.c		\
 							ft_sll_delete.c		\
+							ft_sll_search.c		\
 							ft_sll_insert.c		\
-							ft_sll_create.c		\
 							ft_sll_destroy.c	\
 							ft_sll_unshift.c	\
 
