@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 21:42:51 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/13 21:43:48 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 14:17:50 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	ft_sll_destroy(t_sll *self)
 		current_node = current_node->next;
 		free(temp_node);
 	}
-	free(self);
 }
