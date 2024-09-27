@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 21:55:39 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/13 21:59:25 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 23:54:59 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ft_sll_swap(t_sll *self, int x, int y)
 	t_sll_node	*prev_y_node;
 
 	tmp = NULL;
-	x_node = ft_sll_get(self, x);
-	y_node = ft_sll_get(self, y);
-	prev_x_node = ft_sll_get(self, x - 1);
-	prev_y_node = ft_sll_get(self, y - 1);
+	x_node = ft_sll_get(*self, x);
+	y_node = ft_sll_get(*self, y);
+	prev_x_node = ft_sll_get(*self, x - 1);
+	prev_y_node = ft_sll_get(*self, y - 1);
 	if (!x_node || x >= y || !y_node)
 		return ;
 	if (!prev_x_node)
