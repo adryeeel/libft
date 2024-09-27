@@ -6,19 +6,19 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:37:06 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/20 00:37:48 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/27 01:24:33 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_sll.h"
 
-void	ft_sll_map(t_sll *list, void (*f)(void *))
+void	ft_sll_map(t_sll self, void (*f)(void *))
 {
 	t_sll_node	*current;
 
-	if (!list || !f)
+	if (!f)
 		return ;
-	current = list->head;
+	current = self.head;
 	while (current)
 	{
 		f(current->data);
