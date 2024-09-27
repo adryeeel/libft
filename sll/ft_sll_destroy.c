@@ -6,19 +6,19 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 21:42:51 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/26 14:17:50 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/26 23:51:34 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_sll.h"
 
-void	ft_sll_destroy(t_sll *self)
+void	ft_sll_destroy(t_sll self)
 {
 	t_sll_node	*temp_node;
 	t_sll_node	*current_node;
 
 	temp_node = NULL;
-	current_node = self->head;
+	current_node = self.head;
 	while (current_node != NULL)
 	{
 		temp_node = current_node;
