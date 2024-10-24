@@ -14,8 +14,8 @@
 
 void	*ft_sll_shift(t_sll *self)
 {
-	void		*data;
-	
+	void	*data;
+
 	if (!self->size)
 		return (NULL);
 	if (self->size-- == 1)

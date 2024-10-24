@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-void ft_intarr_swap(int *intarr, size_t x, size_t y)
+void	ft_intarr_swap(int *intarr, size_t x, size_t y)
 {
 	(void)intarr;
 	(void)x;

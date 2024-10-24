@@ -12,7 +12,7 @@
 
 #include "ft_queue.h"
 
-void ft_queue_free(t_queue *q)
+void	ft_queue_free(t_queue *q)
 {
 	while (q->length)
 		ft_dequeue(q);

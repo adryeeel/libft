@@ -12,7 +12,7 @@
 
 #include "ft_strarr.h"
 
-char **ft_strarr_sort(char *strarr[])
+char	**ft_strarr_sort(char *strarr[])
 {
 	(void)strarr;
 	return (NULL);

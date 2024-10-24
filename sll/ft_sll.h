@@ -32,9 +32,10 @@ typedef struct s_sll
 
 void					ft_sll_init(t_sll *self);
 void					ft_sll_destroy(t_sll self);
-void					ft_sll_swap(t_sll *self, int x, int y); 
+void					ft_sll_swap(t_sll *self, int x, int y);
 void					*ft_sll_get(t_sll self, size_t index);
-void					*ft_sll_search(t_sll self, void *target, int (*f)(void*, void*));
+void					*ft_sll_search(t_sll self, void *target,
+							int (*f)(void *, void *));
 void					ft_sll_delete(t_sll *self, size_t index);
 void					ft_sll_map(t_sll self, void (*f)(void *));
 void					*ft_sll_pop(t_sll *self);

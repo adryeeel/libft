@@ -12,10 +12,10 @@
 
 #include "ft_sll.h"
 
-void *ft_sll_pop(t_sll *self)
+void	*ft_sll_pop(t_sll *self)
 {
-	void *data;
-	t_sll_node *new_tail;
+	void		*data;
+	t_sll_node	*new_tail;
 
 	if (!self->size)
 		return (NULL);

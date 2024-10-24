@@ -12,7 +12,7 @@
 
 #include "ft_sll.h"
 
-void *ft_sll_search(t_sll self, void *target, int (*f)(void *, void *))
+void	*ft_sll_search(t_sll self, void *target, int (*f)(void *, void *))
 {
 	t_sll_node	*current_node;
 

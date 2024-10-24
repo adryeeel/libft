@@ -12,7 +12,7 @@
 
 #include "ft_strarr.h"
 
-char **ft_strarr_shift(char *strarr[])
+char	**ft_strarr_shift(char *strarr[])
 {
 	(void)strarr;
 	return (NULL);

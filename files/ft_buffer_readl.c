@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:42:53 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 13:38:52 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:48:20 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,4 @@ int	ft_buffer_readl(int fd, char **buffer)
 	}
 	free(read_buffer);
 	return (read_bytes);
-
-
 }

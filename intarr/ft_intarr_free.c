@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-void ft_intarr_free(int *intarr)
+void	ft_intarr_free(int *intarr)
 {
 	free(intarr);
 }

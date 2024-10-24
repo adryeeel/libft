@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-void ft_intarr_push(int *intarr, int value)
+void	ft_intarr_push(int *intarr, int value)
 {
 	(void)intarr;
 	(void)value;

@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-size_t ft_intarr_length(int *intarr)
+size_t	ft_intarr_length(int *intarr)
 {
 	(void)intarr;
 	return (0);

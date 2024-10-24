@@ -12,10 +12,9 @@
 
 #include "ft_strarr.h"
 
-char *ft_strarr_join(char *strarr[], char sep)
+char	*ft_strarr_join(char *strarr[], char sep)
 {
 	(void)strarr;
 	(void)sep;
 	return (NULL);
 }
-

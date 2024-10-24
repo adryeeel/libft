@@ -12,7 +12,7 @@
 
 #include "ft_strarr.h"
 
-void ft_strarr_swap(char *strarr[], size_t x, size_t y)
+void	ft_strarr_swap(char *strarr[], size_t x, size_t y)
 {
 	(void)strarr;
 	(void)x;

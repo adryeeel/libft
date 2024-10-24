@@ -26,5 +26,5 @@ void	*ft_dequeue(t_queue *q)
 	q->length--;
 	data = node->data;
 	free(node);
-	return(data);
+	return (data);
 }

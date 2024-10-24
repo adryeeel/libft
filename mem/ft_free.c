@@ -6,13 +6,13 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:43:57 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/10/24 10:44:34 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:50:29 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_mem.h"
 
-void ft_free(void **ptr)
+void	ft_free(void **ptr)
 {
 	free(*ptr);
 	*ptr = NULL;

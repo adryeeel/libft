@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:42:52 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 13:17:23 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:47:53 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_buffer_getl(char *buffer)
 	ft_memcpy(next_line, buffer, next_line_len);
 	return (next_line);
 }
-

@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-int *ft_intarr_join(int *intarr_a, int *intarr_b)
+int	*ft_intarr_join(int *intarr_a, int *intarr_b)
 {
 	(void)intarr_a;
 	(void)intarr_b;

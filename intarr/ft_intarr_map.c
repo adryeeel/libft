@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-int *ft_intarr_map(int *intarr, int (*f)(int))
+int	*ft_intarr_map(int *intarr, int (*f)(int))
 {
 	(void)intarr;
 	(void)f;

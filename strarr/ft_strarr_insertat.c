@@ -12,7 +12,7 @@
 
 #include "ft_strarr.h"
 
-char **ft_strarr_insertat(char *strarr[], char *str, size_t index)
+char	**ft_strarr_insertat(char *strarr[], char *str, size_t index)
 {
 	(void)strarr;
 	(void)str;

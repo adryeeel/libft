@@ -12,7 +12,7 @@
 
 #include "ft_intarr.h"
 
-int *ft_intarr_insertat(int *intarr, size_t value, size_t index)
+int	*ft_intarr_insertat(int *intarr, size_t value, size_t index)
 {
 	(void)intarr;
 	(void)value;

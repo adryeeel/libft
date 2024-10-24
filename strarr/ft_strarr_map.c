@@ -12,7 +12,7 @@
 
 #include "ft_strarr.h"
 
-char **ft_strarr_map(char *strarr[], char *(*f)(char *))
+char	**ft_strarr_map(char *strarr[], char *(*f)(char *))
 {
 	(void)strarr;
 	(void)f;

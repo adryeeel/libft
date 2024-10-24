@@ -6,17 +6,17 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:36:24 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/19 14:21:44 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:48:54 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_buffer.h"
 
-char *ft_readl(int fd)
+char	*ft_readl(int fd)
 {
-	int read_bytes;
-	char *next_line;
-	static char *buffer;
+	int			read_bytes;
+	char		*next_line;
+	static char	*buffer;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{

@@ -6,14 +6,14 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:33:33 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/26 15:43:01 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/24 10:46:31 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_convert.h"
 #include "../ctype/ft_ctype.h"
+#include "ft_convert.h"
 
-long ft_atol(const char *nptr)
+long	ft_atol(const char *nptr)
 {
 	long	num;
 	int		sign;

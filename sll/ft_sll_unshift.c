@@ -12,20 +12,20 @@
 
 #include "ft_sll.h"
 
-void ft_sll_unshift(t_sll *self, void *data)
+void	ft_sll_unshift(t_sll *self, void *data)
 {
-	t_sll_node *new_node;
+	t_sll_node	*new_node;
 
 	new_node = (t_sll_node *)malloc(sizeof(t_sll_node));
 	if (!new_node)
-		return;
+		return ;
 	new_node->data = data;
 	new_node->next = self->head;
 	if (self->size++ == 0)
 	{
 		self->head = new_node;
 		self->tail = new_node;
-		return;
+		return ;
 	}
 	self->head = new_node;
 }
