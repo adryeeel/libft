@@ -7,13 +7,14 @@ BUILD_DIR = build
 
 # Memory handling functions
 
-LIBMEM_SRCS =	ft_bzero.c		\
-							ft_calloc.c		\
-							ft_memchr.c		\
-							ft_memcmp.c		\
-							ft_memcpy.c		\
-							ft_memset.c		\
-							ft_memmove.c	\
+LIBMEM_SRCS =	ft_free.c 		\
+				ft_bzero.c		\
+				ft_calloc.c		\
+				ft_memchr.c		\
+				ft_memcmp.c		\
+				ft_memcpy.c		\
+				ft_memset.c		\
+				ft_memmove.c	\
 
 LIBMEM_DIR = mem
 LIBMEM_OBJ = $(addprefix $(LIBMEM_DIR)/$(BUILD_DIR)/, $(LIBMEM_SRCS:.c=.o))
